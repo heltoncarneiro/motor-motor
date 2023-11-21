@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor & Motor - HOME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/Motor e Motor.png" alt="Logo da Motor e Motor, tubo com o nome motor e motor ao redor">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a class="agendar"href="agendar.html">AGENDAR</a>
+            <a href="servico.html">SERVIÇO</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contato.html">CONTATO</a>
+        </nav>
+    </header>
+    <form class="agendar" action="">
+        <h2>
+            AGENDE SEU HORÁRIO
+        </h2>
+        <fieldset>
+            <div>
+                <label for="name" >NOME:</label> <br>
+                <input type="text" id="name" name="usuario" placeholder="DIGITE O SEU NOME COMPLETO" required>
+        
+            </div>
+            <div>
+                <label for="telefone" >TELEFONE PARA CONTATO:</label> <br>
+                <input type="tel" id="telefone" name="telefone" placeholder="DIGITE SEU NUMERO DE CONTATO" required>    
+            </div>
+            <div>
+                <label for="mail" >E-MAIL:</label> <br>
+                <input type="email" id="mail" name="mail" placeholder="DIGITE SEU E-MAIL" required>    
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="separar">
+                <div>
+                    <label for="marca" >MARCA:</label> <br>
+                    <input class="menor" type="text" id="marca" name="marca" placeholder="MARCA DO CARRO" required>    
+                </div>
+                <div>
+                    <label for="ano" >ANO:</label> <br>
+                    <input class="menor" type="text" id="ano" name="ano" placeholder="ANO DE FABRICAÇÃO" required>    
+                </div>
+            </div>
+            <div>
+                <label for="modelo" >MODELO:</label> <br>
+                <input type="text" id="modelo" name="modelo" placeholder="MODELO DO CARRO" required>    
+            </div>
+            <div>
+                <label for="placa" >PLACA:</label> <br>
+                <input type="text" id="placa" name="placa" placeholder="PLACA DO CARRO" required>
+        
+            </div>
+            <div>
+                <label for="Comentario">SERVIÇO:</label>
+                <textarea name="Comentario" id="Comentario" cols="50" rows="5">DESCREVA OS SERVIÇOS A SEREM FEITOS</textarea>
+            </div>
+            <div>
+                <label for="data">DATA DO AGENDAMENTO:</label>
+                <input placeholder="SELECIONE DATA" type="date" name="data" id="data">
+            </div>
+            <button class="botaovermelhor" type="submit">Agende seu horário</button>  
+        </fieldset>
+    </form>
+
+    <footer>
+        <div class="redessociais">
+            <a href=""><img src="imagens/logoinstagram.png" alt="logo do instagram">INSTAGRAM</a>
+            <a href=""><img src="imagens/logofacebook.png" alt="logo do facebook">FACEBOOK</a>
+        </div>
+        <p>
+            © 2023 Motor & Motor. Todos os direitos reservados 
+        </p>
+    </footer>
+</body>
+</html>
