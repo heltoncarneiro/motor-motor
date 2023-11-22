@@ -1,5 +1,5 @@
 {
-  "name": "motor-motor",
+  "name": "express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/heltoncarneiro/motor-motor.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/heltoncarneiro/motor-motor#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   }
 }
