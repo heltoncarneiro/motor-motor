@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="js/agendar.js"></script>
+    <script src="js/esconder.js"></script>
 </head>
 <body>
     <header>
@@ -20,6 +21,7 @@
             <a href="blog.html">BLOG</a>
             <a href="contato.html">CONTATO</a>
         </nav>
+        <button id = "fechar" onclick="esconder()"><img src="imagens/menu.png" alt="Menu" id="imgmenu"> menu </button>
     </header>
     <form class="agendar" action="">
         <h2>
@@ -28,45 +30,45 @@
         <fieldset>
             <div>
                 <label for="name" >NOME:</label> <br>
-                <input type="text" id="name" name="usuario" placeholder="DIGITE O SEU NOME COMPLETO">
+                <input type="text" id="name" name="usuario" class="maxwidth" placeholder="DIGITE O SEU NOME COMPLETO">
         
             </div>
             <div>
                 <label for="telefone" >TELEFONE PARA CONTATO:</label> <br>
-                <input type="tel" id="telefone" name="telefone" placeholder="DIGITE SEU NUMERO DE CONTATO">    
+                <input type="tel" id="telefone" name="telefone" class="maxwidth" placeholder="DIGITE SEU NUMERO DE CONTATO">    
             </div>
             <div>
                 <label for="mail" >E-MAIL:</label> <br>
-                <input type="email" id="mail" name="mail" placeholder="DIGITE SEU E-MAIL" >    
+                <input type="email" id="mail" name="mail" class="maxwidth" placeholder="DIGITE SEU E-MAIL" >    
             </div>
         </fieldset>
         <fieldset>
             <div class="separar">
                 <div>
                     <label for="marca" >MARCA:</label> <br>
-                    <input class="menor" type="text" id="marca" name="marca" placeholder="MARCA DO CARRO">    
+                    <input class="menor" type="text" id="marca" class="maxwidth" name="marca" placeholder="MARCA DO CARRO">    
                 </div>
                 <div>
                     <label for="ano" >ANO:</label> <br>
-                    <input class="menor" type="text" id="ano" name="ano" placeholder="ANO DE FABRICAÇÃO" >    
+                    <input class="menor" type="text" id="ano" class="maxwidth" name="ano" placeholder="ANO DE FABRICAÇÃO" >    
                 </div>
             </div>
             <div>
                 <label for="modelo" >MODELO:</label> <br>
-                <input type="text" id="modelo" name="modelo" placeholder="MODELO DO CARRO" >    
+                <input type="text" id="modelo" name="modelo" class="maxwidth" placeholder="MODELO DO CARRO" >    
             </div>
             <div>
                 <label for="placa" >PLACA:</label> <br>
-                <input type="text" id="placa" name="placa" placeholder="PLACA DO CARRO" >
+                <input type="text" id="placa" name="placa" class="maxwidth" placeholder="PLACA DO CARRO" >
         
             </div>
             <div>
                 <label for="Comentario">SERVIÇO:</label>
-                <textarea name="Comentario" id="Comentario" cols="50" rows="5" placeholder="DESCREVA OS SERVIÇOS A SEREM FEITOS"></textarea>
+                <textarea name="Comentario" id="Comentario" class="maxwidth"  cols="50" rows="5" placeholder="DESCREVA OS SERVIÇOS A SEREM FEITOS"></textarea>
             </div>
             <div>
                 <label for="data">DATA DO AGENDAMENTO:</label>
-                <input placeholder="SELECIONE DATA" type="date" name="data" id="data">
+                <input placeholder="SELECIONE DATA" type="date" class="maxwidth" name="data" id="data" min="">
             </div>
             <button class="botaovermelhor" type="submit">Agende seu horário</button>  
         </fieldset>
