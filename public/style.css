@@ -16,6 +16,7 @@ header{
     justify-content: center;
     flex-wrap: wrap;
     justify-self: center;
+    position: relative;
 }
 header img{
     height: 140px;
@@ -23,6 +24,7 @@ header img{
 nav{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 header a{
@@ -184,6 +186,7 @@ form.agendar button{
     border: none;
     background-color: #D15555;
     max-width: 100%;
+    width: 110px;
     text-decoration: none;
     color: #000;
     height: 37px;
@@ -263,6 +266,7 @@ div.descricao{
     border-radius: 20px;
     height: 250px;
     max-width: 100%;
+    padding: 10px;
 }
 div#descricao{
     color: #fff;
@@ -322,12 +326,11 @@ section.blog{
     height: 25px;
     text-align: center;
     line-height: 25px;
-    background-color:#7A7A7A;
-    border: solid 2px #000;
+    background-color:#D15555;
+    border:  none;
     position: absolute;
-    right: 10px;
-    top: 120px;
-    border-radius: 5px;
+    left: 5px;
+    bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,4 +348,8 @@ input{
 }
 fieldset div{
     max-width: 100%;
+}
+
+.botaovermelhor{
+    cursor: pointer;
 }

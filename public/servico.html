@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="js/esconder.js"></script>
+    <script src="js/servico.js"></script>
 </head>
 <body>
     <header>
@@ -30,39 +31,40 @@
                     VERIFICAR ANDAMENTO DO SERVIÇO
                 </h3>
                 <label for="placa" >PLACA DO CARRO:</label> <br>
-                <input type="text" id="name" name="usuario"required>
+                <input type="text" id="placa" name="placa"required>
             </div>
-            <button class="botaovermelhor" type="submit">VERIFICAR</button>  
+            <button class="botaovermelhor" type="submit">VERIFICAR</button>
+            
         </fieldset>
     </form>
     <div class="status">
         <span>
             <h3>VEICULO ENTREGUE</h3>
-            <div class="circulo">
+            <div class="circulo entregue">
 
             </div>
         </span>
         <span>
             <h3>AVALIAÇÃO</h3>
-            <div class="circulo">
+            <div class="circulo avaliacao">
                 
             </div>
         </span>
         <span>
             <h3>ORÇAMENTO</h3>
-            <div class="circulo">
+            <div class="circulo orcamento">
                 
             </div>
         </span>
         <span>
             <h3>EXECUÇÃO</h3>
-            <div class="circulo">
+            <div class="circulo execucao">
                 
             </div>
         </span>
         <span>
             <h3>ENTREGA</h3>
-            <div class="circulo">
+            <div class="circulo entrega">
                 
             </div>
         </span>
@@ -70,7 +72,9 @@
     <div id="descricao">
         <h3>DESCRIÇÃO:</h3>
         <div class="descricao">
-            
+            <p class="descricao">
+
+            </p>
         </div>
     </div>
     </section>

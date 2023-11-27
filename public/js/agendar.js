@@ -88,11 +88,6 @@ async function enviaDadosParaOBackend() {
     const ano = document.getElementById("ano").value;
     const modelo = document.getElementById("modelo").value;
     const placa = document.getElementById("placa").value.replace(/-/g, '').trim();
-    //const placaElement = document.getElementById("placa"); // Obtém o elemento input
-    //const placa = placaElement.value.replace(/-/g, ''); // Obtém o valor e remove os hífens
-
-    console.log(placa); // Saída: o valor da entrada sem hífen
-
     const comentario = document.getElementById("Comentario").value;
     const data = document.getElementById("data").value;
 
@@ -106,7 +101,13 @@ async function enviaDadosParaOBackend() {
         modelo,
         placa,
         comentario,
-        data
+        data,
+        entregue : false,
+        avaliacao : false,
+        orcamento : false,
+        execucao : false,
+        entrega : false,
+        descricao : '',
     };
 
     const resultado = await fetch('http://localhost:3334/api/agendados', {
