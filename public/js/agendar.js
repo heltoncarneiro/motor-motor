@@ -1,48 +1,9 @@
 window.addEventListener("load",main)
 function main(){
     const form = document.querySelector("form")
-    const inputDate = document.getElementById('data');
-    definirMinimo(inputDate);
-    inputDate.addEventListener('change', validarSelecao);
     form.addEventListener("submit", isEmpty)
     form.reset()   
 }
-
-// Função para verificar se a data é um sábado ou domingo
-function isFimDeSemana(date) {
-  const dayOfWeek = date.getDay();
-  return dayOfWeek === 0 || dayOfWeek === 6; // 0 é domingo, 6 é sábado
-}
-
-// Lógica para definir o mínimo a partir de amanhã, excluindo finais de semana
-function definirMinimo(inputDate) {
-  const amanha = new Date();
-  amanha.setDate(amanha.getDate() + 1);
-
-  // Verifica se amanhã é um fim de semana, se for, avança para a próxima segunda-feira
-  while (isFimDeSemana(amanha)) {
-    amanha.setDate(amanha.getDate() + 1);
-  }
-
-  // Formata a data para o formato esperado pelo input date (YYYY-MM-DD)
-  const dataFormatada = amanha.toISOString().split('T')[0];
-
-  // Define o atributo 'min' do input para permitir apenas datas a partir de amanhã, excluindo finais de semana
-  inputDate.setAttribute('min', dataFormatada);
-}
-
-function validarSelecao(inputDate) {
-    const dataSelecionada = new Date(inputDate.value);
-    while (isFimDeSemana(dataSelecionada)) {
-      dataSelecionada.setDate(dataSelecionada.getDate() + 1);
-      inputDate.value = dataSelecionada.toISOString().split('T')[0];
-    }
-  }
-  
-
-
-
-
 
 function geradorDeID(){
     return new Date().getTime().toString()
@@ -107,7 +68,7 @@ async function enviaDadosParaOBackend() {
         orcamento : false,
         execucao : false,
         entrega : false,
-        descricao : '',
+        descricao : 'Carro ainda não foi entregue na oficina',
     };
 
     const resultado = await fetch('http://localhost:3334/api/agendados', {

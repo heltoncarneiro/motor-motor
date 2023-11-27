@@ -20,10 +20,8 @@ function renderizaDadosNaTela(){
 }
 
 async function main() {
-    // CONSUMIR A API DE FILMES
     const resultado = await fetch("http://localhost:3334/api/blog")
     const converterResultadoParaJson = await resultado.json()
-    
     blog = converterResultadoParaJson
     renderizaDadosNaTela()
 }
