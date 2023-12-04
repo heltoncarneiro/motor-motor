@@ -31,7 +31,7 @@ header a{
     border-radius: 10px;
     background: #fff;
     color: #000;
-    margin: 30px;
+    margin: 25px;
     text-align: center;
     line-height: 55px;
     font-size: 24px;
@@ -310,7 +310,7 @@ section article img{
 section.blog{
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -333,7 +333,6 @@ section.blog{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 form#servicos fieldset{

@@ -48,10 +48,6 @@ router.post("/api/agendados", (requisicao, resposta) => {
     return resposta.status(204).json();
 })
 
-router.get("/api/agendados", (requisicao, resposta) => {
-    return resposta.status(200).json(agendados)
-})
-
 
 router.get("/api/agendados/:placa", (requisicao, resposta) => {
     const routerPlaca = requisicao.params.placa.toString()
