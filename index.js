@@ -13,5 +13,8 @@ app.use('/', blogRoutes);
 app.use('/', agendados);
 
 app.listen(3334, () => {
-    console.log("Seu servidor foi levantado")
+    setInterval(() => {
+        // Substitua a função abaixo pela tarefa que você deseja executar a cada minuto
+        console.log("Executando a tarefa a cada 1 minuto");
+    }, 60 * 1000);
 })
