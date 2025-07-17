@@ -1,82 +1,34 @@
-window.addEventListener("load",main)
-function main(){
-    const form = document.querySelector("form")
-    form.addEventListener("submit", isEmpty)
-    form.reset()   
-}
+function agendar() {
+    const form = document.querySelector('form.agendar');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
-function geradorDeID(){
-    return new Date().getTime().toString()
-}
-
-function isEmpty(evento) {
-    evento.preventDefault(); 
-    const inputs = document.querySelectorAll("input, textarea");
-    inputs.forEach(input => {
-        if (input.value === "") {
-            input.style.border = "2px solid red";
-        } else {
-            input.style.border = ""; 
+        try {
+            const response = await fetch('/agendar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (result.success) {
+                alert('Agendamento realizado com sucesso!');
+                form.reset();
+            } else {
+                alert('Erro ao agendar. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Erro ao agendar. Tente novamente.');
         }
     });
-
-    if (!verificarCamposVazios(inputs)) {
-        enviaDadosParaOBackend();
-        limparCamposDoFormulario();
-    }
-}
-function limparCamposDoFormulario() {
-    const formulario = document.querySelector("form")
-    formulario.reset(); 
-  }
-  
-
-function verificarCamposVazios(inputs) {
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === "") {
-            return true; 
-        }
-    }
-    return false; 
 }
 
-async function enviaDadosParaOBackend() {
-    const id = geradorDeID();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("mail").value;
-    const telefone = document.getElementById("telefone").value;
-    const marca = document.getElementById("marca").value;
-    const ano = document.getElementById("ano").value;
-    const modelo = document.getElementById("modelo").value;
-    const placa = document.getElementById("placa").value.replace(/-/g, '').trim();
-    const comentario = document.getElementById("Comentario").value;
-    const data = document.getElementById("data").value;
-
-    const dados = {
-        id,
-        name,
-        email,
-        telefone,
-        marca,
-        ano,
-        modelo,
-        placa,
-        comentario,
-        data,
-        entregue : false,
-        avaliacao : false,
-        orcamento : false,
-        execucao : false,
-        entrega : false,
-        descricao : 'Carro ainda não foi entregue na oficina',
-    };
-
-    const resultado = await fetch('http://localhost:3334/api/agendados', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dados)    
-    });
-    console.log(resultado);
-}   
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = agendar;
+} else {
+    agendar();
+}

@@ -1,0 +1,25 @@
+section.blog{
+    margin: 50px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+section.blog article{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+section.blog article h2{
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+section.blog article p{
+    color: #333;
+}
+section.blog article img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}

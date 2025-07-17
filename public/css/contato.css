@@ -1,0 +1,22 @@
+ul.contato{
+    padding-left: 0;
+    list-style: none;
+}
+ul.contato li{
+    margin-bottom: 15px;
+}
+img.contato{
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+a.contatos{
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+a.contatos:hover{
+    text-decoration: underline;
+}

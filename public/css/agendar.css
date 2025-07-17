@@ -1,0 +1,68 @@
+form.agendar{
+    margin: 25px auto 25px auto;
+    border-radius: 10px;
+    max-width: 414px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form.agendar fieldset{
+    border: none;
+    margin-bottom: 15px;
+}
+form.agendar input, form.agendar textarea{
+    border: 1px solid #ccc;
+    line-height: 24px;
+    padding: 10px;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+}
+form.agendar textarea{
+    height: 170px;
+}
+form.agendar input::placeholder, form.agendar textarea::placeholder{
+    color: #999;
+}
+form.agendar div{
+    margin-bottom: 15px;
+}
+form.agendar h2{
+    line-height: 67px;
+    height: 67px;
+    background-color:  #e74c3c;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 34px;
+    border-radius: 5px 5px 0 0;
+}
+form.agendar button{
+    margin: 10px auto 20px auto;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: #e74c3c;
+    width: 110px;
+    text-decoration: none;
+    color: #fff;
+    height: 37px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+form.agendar button:hover{
+    background-color: #c0392b;
+}
+form.agendar input.menor{
+    width: 100%;
+}
+form.agendar div.separar{
+    display: flex;
+    justify-content: space-between;
+}
+form.agendar div.separar > div{
+    width: 48%;
+}

@@ -1,28 +1,24 @@
-window.addEventListener("load", main)
-
-function renderizaDadosNaTela(){
-    for (let x = 0; x < blog.length; x++) {
-        const section = document.querySelector("section.blog")
-        const img = document.createElement("img")
-        const titulo = document.createElement("h2")
-        const paragrafo = document.createElement("p")
-        const article = document.createElement("article")
-        article.id = blog[x].id;
-        img.src = blog[x].img
-        titulo.innerText = blog[x].titulo
-        paragrafo.innerText = blog[x].paragrafo
-        article.appendChild(titulo)
-        article.appendChild(paragrafo)
-        article.appendChild(img)
-        section.appendChild(article)
-        console.log(blog[x].id)
+async function blog() {
+    const section = document.querySelector('section.blog');
+    try {
+        const response = await fetch('/blog');
+        const data = await response.json();
+        data.forEach(post => {
+            const article = document.createElement('article');
+            article.innerHTML = `
+                <h2>${post.titulo}</h2>
+                <p>${post.conteudo}</p>
+                <img src="${post.imagem}" alt="${post.titulo}">
+            `;
+            section.appendChild(article);
+        });
+    } catch (error) {
+        console.error('Error:', error);
     }
 }
 
-async function main() {
-    const resultado = await fetch("http://localhost:3334/api/blog")
-    const converterResultadoParaJson = await resultado.json()
-    blog = converterResultadoParaJson
-    renderizaDadosNaTela()
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = blog;
+} else {
+    blog();
 }
-    

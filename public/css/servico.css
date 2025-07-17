@@ -1,0 +1,66 @@
+form#servicos{
+    margin-top: 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form#servicos fieldset{
+    border: none;
+}
+form#servicos h3{
+    font-size: 16px;
+    margin: 5px 0px;
+    text-align: center;
+    color: #2c3e50;
+}
+span{
+    height: 100px;
+    width: 170px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+span h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+span div.circulo{
+    background-color: #ccc;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    transition: all 0.3s ease;
+}
+span div.circulo.entregue{
+    background-color: #2ecc71;
+}
+div.status{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+div.descricao{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+div#descricao{
+    color: #333;
+    width: 950px;
+    max-width: 90%;
+    margin: 140px auto 110px auto;
+}
+div#descricao h3{
+    font-size: 16px;
+    color: #2c3e50;
+}
+section.servicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
